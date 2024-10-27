@@ -60,6 +60,14 @@ Surjith S M ( [@surjithctly](https://surjithctly.in/) )
 
 [![image](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)](https://vercel.com/?utm_source=web3templates&utm_campaign=oss)
 
+## routers
+
+### home page
+you can visit http://localhost:3000, home page in src/app/page.tsx.
+
+### others page
+you can visit http://localhost:3000/<folderName>, when you create <folderName>/page.tsx in src/app.
+
 
 
 

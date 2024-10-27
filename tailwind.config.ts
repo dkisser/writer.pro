@@ -5,10 +5,13 @@ const colors = require("tailwindcss/colors");
 
 const config: Config = {
   mode: "jit",
+  // content: [
+  //   "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+  //   "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+  //   "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  // ],
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/**/*.{js,ts,jsx,tsx,css}'
   ],
   darkMode: "class", // or 'media' or 'class'
   theme: {
@@ -25,6 +28,10 @@ const config: Config = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  corePlugins: {
+    preflight: false
+  },
+  important: '#__next',
+  plugins: [require('tailwindcss-logical'), require('./src/@core/tailwind/plugin')],
 };
 export default config;
