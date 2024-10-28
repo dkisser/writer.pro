@@ -66,7 +66,7 @@ const Navigation = () => {
       {/* Nav Header including Logo & nav toggle icons  */}
       <NavHeader>
         {/* 主页链接 */}
-        <Link href='/card-basic'>
+        <Link href='/'>
           <Logo />
         </Link>
         {isBreakpointReached && <i className='ri-close-line text-xl' onClick={() => toggleVerticalNav(false)} />}
