@@ -5,7 +5,9 @@ import FooterContent from './FooterContent'
 const Footer = () => {
   return (
     <LayoutFooter>
-      <FooterContent />
+      {/* 功能页内容footer */}
+      {/* <FooterContent /> */}
+      <></>
     </LayoutFooter>
   )
 }

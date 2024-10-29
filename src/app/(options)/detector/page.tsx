@@ -16,16 +16,18 @@ import { PopupWidget }  from "@/components/PopupWidget";
 import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
-  title: "Writer.pro - One-stop chatGPT AI research assistant - Writer.pro",
-  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more.",
+  title: "Writer.pro - Detector",
+  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more. Detector",
 };
 
-export default function Home() {
+const Detector = () => {
   return (
     <ThemeProvider attribute="class">
-      <Navbar />
       <Container>
-        <Hero />
+        <Hero 
+          heroTitle="AI Detector by XXX - XXXXX"
+          heroDescription="XXX's AI-powered essay generator assists in conquering writer's block by crafting essays that are rich in precise, thoroughly researched content."
+        />
         <SectionTitle
           preTitle="Nextly Benefits"
           title=" Why should you use this landing page"
@@ -71,5 +73,7 @@ export default function Home() {
       <PopupWidget />
     </ThemeProvider>
     
-  );
+  )
 }
+
+export default Detector

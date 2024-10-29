@@ -16,16 +16,18 @@ import { PopupWidget }  from "@/components/PopupWidget";
 import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
-  title: "Writer.pro - One-stop chatGPT AI research assistant - Writer.pro",
-  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more.",
+  title: "Writer.pro - Mind-Map-Maker",
+  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more. Mind-Map-Maker",
 };
 
-export default function Home() {
+const MindMapMaker = () => {
   return (
     <ThemeProvider attribute="class">
-      <Navbar />
       <Container>
-        <Hero />
+        <Hero 
+          heroTitle="AI Mind Map Maker"
+          heroDescription="AI Mind Map Maker powerd by XXX - XXXXX"
+        />
         <SectionTitle
           preTitle="Nextly Benefits"
           title=" Why should you use this landing page"
@@ -71,5 +73,7 @@ export default function Home() {
       <PopupWidget />
     </ThemeProvider>
     
-  );
+  )
 }
+
+export default MindMapMaker

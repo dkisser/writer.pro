@@ -61,7 +61,20 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
         renderExpandedMenuItemIcon={{ icon: <i className='ri-circle-line' /> }}
         menuSectionStyles={menuSectionStyles(theme)}
       >
-        <SubMenu
+        <MenuItem href='/easy-writer' icon={<i className='ri-voice-ai-line' />}>
+          AI Essay Writer
+        </MenuItem>
+        <MenuItem href='/detector' icon={<i className='ri-chat-1-line' />}>
+          AI Detector
+        </MenuItem>
+        <MenuItem href='/mind-map-maker' icon={<i className='ri-mind-map' />}>
+          AI Mind Map Maker
+        </MenuItem>
+        <MenuItem href='/bypass' icon={<i className='ri-user-settings-line' />}>
+          Human Written
+        </MenuItem>
+        {/* 示例代码 */}
+        {/* <SubMenu
           label='Dashboards'
           icon={<i className='ri-home-smile-line' />}
           suffix={<Chip label='1' size='small' color='error' />}
@@ -100,8 +113,7 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
             Form Layouts
           </MenuItem>
         </MenuSection>
-        {/* 示例代码 */}
-        {/* <MenuSection label='Misc'>
+        <MenuSection label='Misc'>
           <SubMenu label='Others' icon={<i className='ri-more-line' />}>
             <MenuItem suffix={<Chip label='New' size='small' color='info' />}>Item With Badge</MenuItem>
             <MenuItem

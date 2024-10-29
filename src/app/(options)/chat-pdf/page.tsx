@@ -16,14 +16,13 @@ import { PopupWidget }  from "@/components/PopupWidget";
 import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
-  title: "Writer.pro - One-stop chatGPT AI research assistant - Writer.pro",
-  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more.",
+  title: "Writer.pro - Chat-PDF",
+  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more. Chat-PDF",
 };
 
-export default function Home() {
+const ChatPdf = () => {
   return (
     <ThemeProvider attribute="class">
-      <Navbar />
       <Container>
         <Hero />
         <SectionTitle
@@ -71,5 +70,7 @@ export default function Home() {
       <PopupWidget />
     </ThemeProvider>
     
-  );
+  )
 }
+
+export default ChatPdf

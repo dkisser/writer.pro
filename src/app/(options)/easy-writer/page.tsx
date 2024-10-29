@@ -16,16 +16,18 @@ import { PopupWidget }  from "@/components/PopupWidget";
 import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
-  title: "Writer.pro - One-stop chatGPT AI research assistant - Writer.pro",
-  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more.",
+  title: "Writer.pro - Easy-Writer",
+  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more. Easy-Writer",
 };
 
-export default function Home() {
+const EasyWriter = () => {
   return (
     <ThemeProvider attribute="class">
-      <Navbar />
       <Container>
-        <Hero />
+        <Hero 
+          heroTitle="Free AI Writer - Text Generator & AI Writing Assistant" 
+          heroDescription= "Generate high-quality content  for social media, marketing, advertising, product descriptions, websites and more. 100% free . Results in no seconds."
+        />
         <SectionTitle
           preTitle="Nextly Benefits"
           title=" Why should you use this landing page"
@@ -71,5 +73,7 @@ export default function Home() {
       <PopupWidget />
     </ThemeProvider>
     
-  );
+  )
 }
+
+export default EasyWriter
