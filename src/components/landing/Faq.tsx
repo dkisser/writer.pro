@@ -3,10 +3,15 @@ import React from "react";
 import { Container } from "@/components/landing/Container";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
+import { SectionTitle } from "./SectionTitle";
 
 export const Faq = () => {
   return (
     <Container className="!p-0">
+      <SectionTitle title="Frequently Asked Questions">
+        Answer your customers possible questions here, it will increase the
+        conversion rate as well as support or chat requests.
+      </SectionTitle>
       <div className="w-full max-w-2xl p-2 mx-auto rounded-2xl">
         {faqdata.map((item, index) => (
           <div key={item.question} className="mb-5">

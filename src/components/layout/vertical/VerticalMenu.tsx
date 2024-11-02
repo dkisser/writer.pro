@@ -71,7 +71,7 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
           AI Mind Map Maker
         </MenuItem>
         <MenuItem href='/bypass' icon={<i className='ri-user-settings-line' />}>
-          Human Written
+          Bypass
         </MenuItem>
         {/* 示例代码 */}
         {/* <SubMenu

@@ -49,7 +49,7 @@ const Login = ({ mode }: { mode: Mode }) => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    router.push('/')
+    router.push('/easy-writer')
   }
 
   return (

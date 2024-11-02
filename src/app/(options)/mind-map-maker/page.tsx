@@ -14,6 +14,7 @@ import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
 import { PopupWidget }  from "@/components/PopupWidget";
 import { ThemeProvider } from "next-themes";
+import UpgradeToProButton from "@/components/upgrade-to-pro-button";
 
 export const metadata: Metadata = {
   title: "Writer.pro - Mind-Map-Maker",
@@ -70,7 +71,8 @@ const MindMapMaker = () => {
         {/* <Cta /> */}
       </Container>
       <Footer />
-      <PopupWidget />
+      {/* <PopupWidget /> */}
+      <UpgradeToProButton />
     </ThemeProvider>
     
   )
