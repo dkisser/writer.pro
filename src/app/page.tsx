@@ -18,6 +18,7 @@ import UpgradeToProButton from "@/components/upgrade-to-pro-button";
 import Tooltip from "@mui/material/Tooltip";
 import styles from '../components/upgrade-to-pro-button/styles.module.css'
 import { DigitalMarketing } from "@/components/landing/DigitalMarketing";
+import { Testimonials2 } from "@/components/landing/Testimonials2";
 
 export const metadata: Metadata = {
   title: "Writer.pro - One-stop chatGPT AI research assistant - Writer.pro",
@@ -30,12 +31,12 @@ export default function Home() {
       <Navbar />
       <Container>
         <Hero heroTitle="营销板块1" heroDescription="功能描述"/>
+        <Testimonials2 />
         <SectionTitle
           title="Why should you use Writer.pro"
         >
           下面是具体功能介绍
         </SectionTitle>
-
         <Benefits data={benefitOne} />
         <Benefits imgPos="right" data={benefitTwo} />
         <Benefits data={benefitThree} />
