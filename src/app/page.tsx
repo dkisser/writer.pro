@@ -31,7 +31,6 @@ export default function Home() {
       <Container>
         <Hero heroTitle="营销板块1" heroDescription="功能描述"/>
         <SectionTitle
-          preTitle="Writer.pro Benefits"
           title="Why should you use Writer.pro"
         >
           下面是具体功能介绍

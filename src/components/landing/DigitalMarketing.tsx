@@ -28,6 +28,51 @@ export const DigitalMarketing = () => {
                     <div className="pt-2 text-gray-400 dark:text-gray-400">
                     <SonyLogo />
                     </div>
+                    <div className="pt-2 text-gray-400 dark:text-gray-400">
+                    <AmazonLogo />
+                    </div>
+                    <div className="text-gray-400 dark:text-gray-400">
+                    <VerizonLogo />
+                    </div>
+                    <div className="text-gray-400 dark:text-gray-400">
+                    <MicrosoftLogo />
+                    </div>
+                    <div className="pt-1 text-gray-400 dark:text-gray-400">
+                    <NetflixLogo />
+                    </div>
+                    <div className="pt-2 text-gray-400 dark:text-gray-400">
+                    <SonyLogo />
+                    </div>
+                    <div className="pt-2 text-gray-400 dark:text-gray-400">
+                    <AmazonLogo />
+                    </div>
+                    <div className="text-gray-400 dark:text-gray-400">
+                    <VerizonLogo />
+                    </div>
+                    <div className="text-gray-400 dark:text-gray-400">
+                    <MicrosoftLogo />
+                    </div>
+                    <div className="pt-1 text-gray-400 dark:text-gray-400">
+                    <NetflixLogo />
+                    </div>
+                    <div className="pt-2 text-gray-400 dark:text-gray-400">
+                    <SonyLogo />
+                    </div>
+                    <div className="pt-2 text-gray-400 dark:text-gray-400">
+                    <AmazonLogo />
+                    </div>
+                    <div className="text-gray-400 dark:text-gray-400">
+                    <VerizonLogo />
+                    </div>
+                    <div className="text-gray-400 dark:text-gray-400">
+                    <MicrosoftLogo />
+                    </div>
+                    <div className="pt-1 text-gray-400 dark:text-gray-400">
+                    <NetflixLogo />
+                    </div>
+                    <div className="pt-2 text-gray-400 dark:text-gray-400">
+                    <SonyLogo />
+                    </div>
                 </div>
             </div>
         </Container>

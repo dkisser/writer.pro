@@ -53,7 +53,7 @@ const TooltipContent = () => {
 const UpgradeToProButton = () => {
   return (
     <div className={classnames(styles.wrapper, 'mui-fixed')}>
-      <Tooltip
+      {/* <Tooltip
         title={<TooltipContent />}
         placement='top-end'
         slotProps={{ tooltip: { style: { padding: 0, backgroundColor: 'transparent', maxInlineSize: 400 } } }}
@@ -67,7 +67,16 @@ const UpgradeToProButton = () => {
           Upgrade to Pro
           <span className={styles.buttonInner} />
         </a>
-      </Tooltip>
+      </Tooltip> */}
+      <a
+          className={styles.button}
+          role='button'
+          href='/login'
+          target='_blank'
+        >
+          Upgrade to Pro
+          <span className={styles.buttonInner} />
+        </a>
     </div>
   )
 }
