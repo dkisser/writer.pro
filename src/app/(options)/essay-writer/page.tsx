@@ -17,8 +17,8 @@ import { ThemeProvider } from "next-themes";
 import UpgradeToProButton from "@/components/upgrade-to-pro-button";
 
 export const metadata: Metadata = {
-  title: "Writer.pro - Easy-Writer",
-  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more. Easy-Writer",
+  title: "Writer.pro - essay-writer",
+  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more. essay-writer",
 };
 
 const EasyWriter = () => {

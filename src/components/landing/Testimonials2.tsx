@@ -21,7 +21,7 @@ export const Testimonials2 = () => {
         <CardButton image={userOneImg}
           name="AI Essay Writer"
           title="Go AI Essay Writer"
-          href="/easy-writer"
+          href="/essay-writer"
         />
 
         <CardButton image={userTwoImg}

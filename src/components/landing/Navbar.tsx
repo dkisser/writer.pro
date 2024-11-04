@@ -12,7 +12,7 @@ export const Navbar = () => {
   //   "Bypass",
   // ];
   const navigation = [
-    {title: "AI Essay Writer", href: "/easy-writer"},
+    {title: "AI Essay Writer", href: "/essay-writer"},
     {title: "AI Detector", href: "/detector"},
     {title: "AI Mind Map Maker", href: "/mind-map-maker"},
     {title: "Bypass", href: "/bypass"},

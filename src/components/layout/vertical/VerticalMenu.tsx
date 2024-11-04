@@ -61,7 +61,7 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
         renderExpandedMenuItemIcon={{ icon: <i className='ri-circle-line' /> }}
         menuSectionStyles={menuSectionStyles(theme)}
       >
-        <MenuItem href='/easy-writer' icon={<i className='ri-voice-ai-line' />}>
+        <MenuItem href='/essay-writer' icon={<i className='ri-voice-ai-line' />}>
           AI Essay Writer
         </MenuItem>
         <MenuItem href='/detector' icon={<i className='ri-chat-1-line' />}>
