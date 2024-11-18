@@ -27,6 +27,13 @@ import Logo from '@components/layout/shared/Logo'
 
 // Hook Imports
 import { useImageVariant } from '@core/hooks/useImageVariant'
+import { useForm } from 'react-hook-form'
+import writerPro from '@/configs/writerpro'
+import { apiLogin, apiRegister } from '@/utils/api'
+import { useRouter } from 'next/dist/client/components/navigation'
+import FormHelperText from '@mui/material/FormHelperText'
+import Alert from '../../components/Alert'
+
 
 const Register = ({ mode }: { mode: Mode }) => {
   // States
@@ -41,6 +48,29 @@ const Register = ({ mode }: { mode: Mode }) => {
 
   const handleClickShowPassword = () => setIsPasswordShown(show => !show)
 
+  const {register, handleSubmit, formState: { errors}} = useForm();
+  const router = useRouter();
+
+  const onSubmit = (data: any) => {
+    const params = {
+      ...data,
+      tenantCode: writerPro.tenantCode,
+      loginType: 'email'
+    }
+    apiRegister(params)
+      .then((res) => {
+        if (res.code !== 0) {
+          Alert.error("Login failed, " + res.msg);
+          return;
+        }
+        localStorage.setItem('writer_user', JSON.stringify(res.data));
+        router.push(writerPro.loginSuccessPage);
+      })
+      .catch(error => {
+        Alert.error("Login error: " + error);
+      });
+  }
+
   return (
     <div className='flex flex-col justify-center items-center min-bs-[100dvh] relative p-6'>
       <Card className='flex flex-col sm:is-[450px]'>
@@ -51,13 +81,42 @@ const Register = ({ mode }: { mode: Mode }) => {
           <Typography variant='h4'>Adventure starts here 🚀</Typography>
           <div className='flex flex-col gap-5'>
             <Typography className='mbs-1'>Make your app management easy and fun!</Typography>
-            <form noValidate autoComplete='off' onSubmit={e => e.preventDefault()} className='flex flex-col gap-5'>
-              <TextField autoFocus fullWidth label='Username' />
-              <TextField fullWidth label='Email' />
+            <form noValidate autoComplete='off' onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-5'>
+              <TextField autoFocus fullWidth label='Username' 
+                error={!!errors.nickname}
+                helperText={!!errors.nickname && errors.nickname?.message as string}
+                {...register("nickname", {
+                  required: "Enter your uname",
+                  pattern: {
+                    value: /^\S{4,16}$/i,
+                    message: "Uname must be 4 to 16 characters",
+                  },
+                })} 
+                />
+              <TextField fullWidth label='Email' 
+                error={!!errors.email}
+                helperText={!!errors.email && errors.email?.message as string}
+                {...register("email", {
+                  required: "Enter your email",
+                  pattern: {
+                    value: /^\S+@\S+$/i,
+                    message: "Please enter a valid email",
+                  },
+                })} 
+                />
               <TextField
                 fullWidth
                 label='Password'
                 type={isPasswordShown ? 'text' : 'password'}
+                error={!!errors.password}
+                helperText={!!errors.password && errors.password?.message as string}
+                {...register("password", {
+                  required: "Enter your password",
+                  pattern: {
+                    value: /^\S{6,24}$/i,
+                    message: "Password length must be between 6 and 24 characters",
+                  },
+                })}
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position='end'>
@@ -74,7 +133,11 @@ const Register = ({ mode }: { mode: Mode }) => {
                 }}
               />
               <FormControlLabel
-                control={<Checkbox />}
+                control={<Checkbox 
+                  {...register("agreement", {
+                    required: "Please read 'the privacy policy & terms' first."
+                  })}
+                />}
                 label={
                   <>
                     <span>I agree to </span>
@@ -84,6 +147,7 @@ const Register = ({ mode }: { mode: Mode }) => {
                   </>
                 }
               />
+              <FormHelperText error={!!errors.agreement}>{errors.agreement?.message as string}</FormHelperText>
               <Button fullWidth variant='contained' type='submit'>
                 Sign Up
               </Button>
@@ -113,6 +177,7 @@ const Register = ({ mode }: { mode: Mode }) => {
         </CardContent>
       </Card>
       <Illustrations maskImg={{ src: authBackground }} />
+      {Alert.renderAlert()}
     </div>
   )
 }

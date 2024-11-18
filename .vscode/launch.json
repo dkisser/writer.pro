@@ -5,6 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:3000",
+        },
+        {
             "command": "yarn dev",
             "name": "Run yarn dev",
             "request": "launch",

@@ -20,6 +20,7 @@ import StyledVerticalNavExpandIcon from '@menu/styles/vertical/StyledVerticalNav
 // Style Imports
 import menuItemStyles from '@core/styles/vertical/menuItemStyles'
 import menuSectionStyles from '@core/styles/vertical/menuSectionStyles'
+import writerPro from '@/configs/writerpro'
 
 type RenderExpandIconProps = {
   open?: boolean
@@ -61,7 +62,7 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
         renderExpandedMenuItemIcon={{ icon: <i className='ri-circle-line' /> }}
         menuSectionStyles={menuSectionStyles(theme)}
       >
-        <MenuItem href='/essay-writer' icon={<i className='ri-voice-ai-line' />}>
+        <MenuItem href={writerPro.loginSuccessPage} icon={<i className='ri-voice-ai-line' />}>
           AI Essay Writer
         </MenuItem>
         <MenuItem href='/detector' icon={<i className='ri-chat-1-line' />}>

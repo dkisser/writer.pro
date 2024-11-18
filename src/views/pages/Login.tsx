@@ -32,6 +32,11 @@ import themeConfig from '@configs/themeConfig'
 
 // Hook Imports
 import { useImageVariant } from '@core/hooks/useImageVariant'
+import GoogleLoginButton from '../../components/GoogleLoginButton'
+import writerPro from '@/configs/writerpro'
+import { useForm } from 'react-hook-form'
+import { apiLogin } from '@/utils/api'
+import Alert from '../../components/Alert'
 
 const Login = ({ mode }: { mode: Mode }) => {
   // States
@@ -47,9 +52,26 @@ const Login = ({ mode }: { mode: Mode }) => {
 
   const handleClickShowPassword = () => setIsPasswordShown(show => !show)
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    router.push('/essay-writer')
+  const {register, handleSubmit, formState: { errors}} = useForm();
+  const onSubmit = (data: any) => {
+    const params = {
+      ...data,
+      tenantCode: writerPro.tenantCode,
+      loginType: 'email'
+    }
+    apiLogin(params)
+      .then((res) => {
+        if (res.code !== 0) {
+          Alert.error("Login failed, " + res.msg);
+          return;
+        }
+        localStorage.setItem('writer_user', JSON.stringify(res.data));
+        router.push(writerPro.loginSuccessPage);
+      })
+      .catch(error => {
+        Alert.error("Login error: " + error);
+      })
+    
   }
 
   return (
@@ -64,13 +86,33 @@ const Login = ({ mode }: { mode: Mode }) => {
               <Typography variant='h4'>{`Welcome to ${themeConfig.templateName}!👋🏻`}</Typography>
               <Typography className='mbs-1'>Please sign-in to your account and start the adventure</Typography>
             </div>
-            <form noValidate autoComplete='off' onSubmit={handleSubmit} className='flex flex-col gap-5'>
-              <TextField autoFocus fullWidth label='Email' />
+            <form noValidate autoComplete='off' onSubmit={handleSubmit(onSubmit)} className={`flex flex-col gap-5 `}>
+              <TextField autoFocus fullWidth label='Email' 
+                error={!!errors.email}
+                helperText={!!errors.email && errors.email?.message as string}
+                {...register("email", {
+                  required: "Enter your email",
+                  pattern: {
+                    value: /^\S+@\S+$/i,
+                    message: "Please enter a valid email",
+                  },
+                })} 
+                />
+
               <TextField
                 fullWidth
                 label='Password'
                 id='outlined-adornment-password'
                 type={isPasswordShown ? 'text' : 'password'}
+                error={!!errors.password}
+                helperText={!!errors.password && errors.password?.message as string}
+                {...register("password", {
+                  required: "Enter your password",
+                  pattern: {
+                    value: /^\S{6,24}$/i,
+                    message: "Password length must be between 6 and 24 characters",
+                  },
+                })}
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position='end'>
@@ -87,7 +129,7 @@ const Login = ({ mode }: { mode: Mode }) => {
                 }}
               />
               <div className='flex justify-between items-center gap-x-3 gap-y-1 flex-wrap'>
-                <FormControlLabel control={<Checkbox />} label='Remember me' />
+                {/* <FormControlLabel control={<Checkbox />} label='Remember me' /> */}
                 <Typography className='text-end' color='primary' component={Link} href='/forgot-password'>
                   Forgot password?
                 </Typography>
@@ -103,7 +145,7 @@ const Login = ({ mode }: { mode: Mode }) => {
               </div>
               <Divider className='gap-3'>or</Divider>
               <div className='flex justify-center items-center gap-2'>
-                <IconButton size='small' className='text-facebook'>
+                {/* <IconButton size='small' className='text-facebook'>
                   <i className='ri-facebook-fill' />
                 </IconButton>
                 <IconButton size='small' className='text-twitter'>
@@ -111,16 +153,18 @@ const Login = ({ mode }: { mode: Mode }) => {
                 </IconButton>
                 <IconButton size='small' className='text-github'>
                   <i className='ri-github-fill' />
-                </IconButton>
-                <IconButton size='small' className='text-googlePlus'>
+                </IconButton> */}
+                {/* <IconButton size='small' className='text-googlePlus'>
                   <i className='ri-google-fill' />
-                </IconButton>
+                </IconButton> */}
+                <GoogleLoginButton />
               </div>
             </form>
           </div>
         </CardContent>
       </Card>
       <Illustrations maskImg={{ src: authBackground }} />
+      {Alert.renderAlert()}
     </div>
   )
 }
