@@ -17,6 +17,9 @@ const RootLayout = ({ children }: ChildrenType) => {
 
   return (
     <html id='__next' dir={direction}>
+      <head>
+        <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+      </head>
       <body className='flex is-full min-bs-full flex-auto flex-col'>{children}</body>
     </html>
   )

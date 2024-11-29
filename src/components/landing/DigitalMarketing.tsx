@@ -9,7 +9,7 @@ export const DigitalMarketing = () => {
                     
                 </div>
                 <div className="text-sm text-center text-gray-400 dark:text-white">
-                    Hix.ai xxxxxxxx
+                    AIWriter.PRO xxxxxxxx
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">

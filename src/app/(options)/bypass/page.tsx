@@ -17,8 +17,8 @@ import { ThemeProvider } from "next-themes";
 import UpgradeToProButton from "@/components/upgrade-to-pro-button";
 
 export const metadata: Metadata = {
-  title: "Writer.pro - Bypass",
-  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more. Bypass",
+  title: "Humanize AI content with AI Pro | Bypass AI detection",
+  description: "Rewrite any content with our Bypass tool using anti-AI algorithms. Perfect for homework and assignments. AIWriter.PRO helps you write like a pro!",
 };
 
 const Bypass = () => {
@@ -28,6 +28,7 @@ const Bypass = () => {
         <Hero 
           heroTitle="Write like Human: Undetectable AI Generator - XXXXX"
           heroDescription="Write like Human offers an undetectable AI generator, ensuring your content is indistinguishable from human-written text. Perfect for writers and marketers seeking a competitive edge. Create natural, engaging content effortlessly. Try our AI generator today!"
+          alt="brand slogan, Write like Human: Undetectable AI Generator"
         />
         <SectionTitle
           preTitle="Nextly Benefits"

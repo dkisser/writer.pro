@@ -17,8 +17,8 @@ import { ThemeProvider } from "next-themes";
 import UpgradeToProButton from "@/components/upgrade-to-pro-button";
 
 export const metadata: Metadata = {
-  title: "Writer.pro - Mind-Map-Maker",
-  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more. Mind-Map-Maker",
+  title: "AI Mind Map Maker - Instand generating & visualizing ideas",
+  description: "Generate, summarize, and visualize ideas with AI Mind Map Maker. Create mind maps instantly from PDFs, Word, and text—perfect for studying and brainstorming!",
 };
 
 const MindMapMaker = () => {
@@ -28,6 +28,7 @@ const MindMapMaker = () => {
         <Hero 
           heroTitle="AI Mind Map Maker"
           heroDescription="AI Mind Map Maker powerd by XXX - XXXXX"
+          alt="brand slogan, AI Mind Map Maker"
         />
         <SectionTitle
           preTitle="Nextly Benefits"

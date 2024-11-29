@@ -61,6 +61,21 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
             </div>
           </div>
         </div>
+
+        <div
+          className="" >
+          <div>
+          <a
+            className=""
+            role='button'
+            href='/login'
+            target='_blank'
+          >
+            Upgrade to Pro
+            <span className="" />
+          </a>
+          </div>
+        </div>
       </Container>
   );
 };

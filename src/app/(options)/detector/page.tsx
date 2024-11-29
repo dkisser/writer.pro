@@ -17,8 +17,8 @@ import { ThemeProvider } from "next-themes";
 import UpgradeToProButton from "@/components/upgrade-to-pro-button";
 
 export const metadata: Metadata = {
-  title: "Writer.pro - Detector",
-  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more. Detector",
+  title: " AI Detector - Reliable AI Checker for ChatGPT, Claude & More",
+  description: "Reliable AI checker for all AI models. Analyzes multiple components to ensure originality—perfect for college students seeking credible academic writing.",
 };
 
 const Detector = () => {
@@ -28,6 +28,7 @@ const Detector = () => {
         <Hero 
           heroTitle="AI Detector by XXX - XXXXX"
           heroDescription="XXX's AI-powered essay generator assists in conquering writer's block by crafting essays that are rich in precise, thoroughly researched content."
+          alt="brand slogan, AI Detector by XXX"
         />
         <SectionTitle
           preTitle="Nextly Benefits"

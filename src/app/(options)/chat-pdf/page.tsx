@@ -17,15 +17,15 @@ import { ThemeProvider } from "next-themes";
 import UpgradeToProButton from "@/components/upgrade-to-pro-button";
 
 export const metadata: Metadata = {
-  title: "Writer.pro - Chat-PDF",
-  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more. Chat-PDF",
+  title: "AIWriter.PRO - Chat-PDF",
+  description: "AIWriter.PRO powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more. Chat-PDF",
 };
 
 const ChatPdf = () => {
   return (
     <ThemeProvider attribute="class">
       <Container>
-        <Hero />
+        {/* <Hero /> */}
         <SectionTitle
           preTitle="Nextly Benefits"
           title=" Why should you use this landing page"

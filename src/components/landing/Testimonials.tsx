@@ -51,7 +51,7 @@ export const Testimonials = () => {
             </p>
           </AlignCenterBox>
           <p>
-            Countries that use QuillBot
+            Countries that use AIWriter.PRO
           </p>
 
           {/* <Avatar
@@ -68,7 +68,7 @@ export const Testimonials = () => {
             </p>
           </AlignCenterBox>
           <p>
-            Average time savings per writng project
+            Average time savings per writing project
           </p>
 
         </div>
@@ -80,7 +80,7 @@ export const Testimonials = () => {
             </p>
           </AlignCenterBox>
           <p>
-            Million writers worldwide
+            Chrome store rating
           </p>
 
         </div>

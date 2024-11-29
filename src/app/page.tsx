@@ -21,8 +21,8 @@ import { DigitalMarketing } from "@/components/landing/DigitalMarketing";
 import { Testimonials2 } from "@/components/landing/Testimonials2";
 
 export const metadata: Metadata = {
-  title: "Writer.pro - One-stop chatGPT AI research assistant - Writer.pro",
-  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more.",
+  title: "Free AI writer for students - make academic writing easier",
+  description: "Write effortlessly with our free AI writer for college students. Perfect for essays, papers, and assignments with human-like quality and bypass tools.",
 };
 
 export default function Home() {
@@ -30,13 +30,18 @@ export default function Home() {
     <ThemeProvider attribute="class">
       <Navbar />
       <Container>
-        <Hero heroTitle="营销板块1" heroDescription="功能描述"/>
+        <Hero 
+          heroTitle="AIwritor.pro: Write Like a Pro. " 
+          heroDescription="Free AI Writing Tool for Students - Make Academic Writing Easier"
+          alt="brand slogan, AIwritor.pro , write like a pro."
+          />
+
         <Testimonials2 />
         <SectionTitle
-          title="Why should you use Writer.pro"
+          title="Why should you use AIWriter.PRO"
         >
-          下面是具体功能介绍
         </SectionTitle>
+        
         <Benefits data={benefitOne} />
         <Benefits imgPos="right" data={benefitTwo} />
         <Benefits data={benefitThree} />

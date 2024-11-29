@@ -23,7 +23,7 @@ export type Config = {
 }
 
 const themeConfig: Config = {
-  templateName: 'Writer.pro',
+  templateName: 'AIWriter.PRO',
   settingsCookieName: 'materpro-theme-settings',
   mode: 'light', // 'light', 'dark'
   layoutPadding: 24, // Common padding for header, content, footer layout components (in px)

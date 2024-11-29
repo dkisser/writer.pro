@@ -6,18 +6,11 @@ import { Disclosure } from "@headlessui/react";
 import writerPro from "@/configs/writerpro";
 
 export const Navbar = () => {
-  // const navigation = [
-  //   "AI Essay Writer",
-  //   "AI Detector",
-  //   "AI Mind Map Maker",
-  //   "Bypass",
-  // ];
   const navigation = [
-    {title: "AI Essay Writer", href: "/essay-writer"},
+    {title: "AI Bypass", href: "/bypass"},
     {title: "AI Detector", href: "/detector"},
+    {title: "AI Essay Writer", href: "/essay-writer"},
     {title: "AI Mind Map Maker", href: "/mind-map-maker"},
-    {title: "Bypass", href: "/bypass"},
-
 
   ];
 
@@ -27,7 +20,8 @@ export const Navbar = () => {
         {/* Logo  */}
         <Link href="/">
           <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
-              <span>
+            {/* logo */}
+              {/* <span>
                 <Image
                   src="/img/logo.svg"
                   width="32"
@@ -35,8 +29,8 @@ export const Navbar = () => {
                   height="32"
                   className="w-8"
                 />
-              </span>
-            <span>Writer.pro</span>
+              </span> */}
+            <span>AIWriter.PRO</span>
           </span>
         </Link>
 

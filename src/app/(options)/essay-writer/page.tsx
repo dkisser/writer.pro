@@ -15,10 +15,11 @@ import { Footer } from "@/components/landing/Footer";
 import { PopupWidget }  from "@/components/PopupWidget";
 import { ThemeProvider } from "next-themes";
 import UpgradeToProButton from "@/components/upgrade-to-pro-button";
+import PricingTable from "@/components/PricingTable";
 
 export const metadata: Metadata = {
-  title: "Writer.pro - essay-writer",
-  description: "Writer.pro powered by GPT4 provides One-stop AI research tools , including AI chat, writer, reader, AI detector, PPT generator and more. essay-writer",
+  title: "AI Essay Writer| Undetectable Gen AI tool|100% Human-like",
+  description: "Generate plagiarism-free essays with our undetectable AI Essay Writer. 100% human-like, original, and perfect for academic success. Simplify writing now!",
 };
 
 const EasyWriter = () => {
@@ -28,6 +29,7 @@ const EasyWriter = () => {
         <Hero 
           heroTitle="Free AI Writer - Text Generator & AI Writing Assistant" 
           heroDescription= "Generate high-quality content  for social media, marketing, advertising, product descriptions, websites and more. 100% free . Results in no seconds."
+          alt="brand slogan, AI Essay Writer"
         />
         <SectionTitle
           preTitle="Nextly Benefits"
@@ -51,6 +53,7 @@ const EasyWriter = () => {
         </SectionTitle>
 
         <Video videoId="fZ0D0cnR88E" />
+        <PricingTable />
 
         <SectionTitle
           preTitle="Testimonials"

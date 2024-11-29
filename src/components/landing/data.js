@@ -11,92 +11,92 @@ import benefitOneImg from "../../../public/img/benefit-one.png";
 import benefitTwoImg from "../../../public/img/benefit-two.png";
 
 const benefitOne = {
-  title: "AI Essay Writer",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "AI Bypass - Bypass AI Every Time With 100% Undetectable Content",
+  desc: "Generate Human-Like Content. Guaranteed Plagiarism-Free!",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
+      title: "Wide Coverage",
+      desc: "Covers all popular AI Detectors Like GPTZero, Originality.ai and More.",
       icon: <FaceSmileIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
+      title: "High Success Rate",
+      desc: "Built-in detection capabilities ensure a 99% success rate.",
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
+      title: "Outstanding Features",
+      desc: "Plagiarism-free and avoids spam folders.",
       icon: <CursorArrowRaysIcon />,
     },
   ],
 };
 
 const benefitTwo = {
-  title: "AI Detector",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  title: "AI Detector - Reliable and Easy to Use",
+  desc: "AI Checker for ChatGPT, Claude & More",
   image: benefitTwoImg,
   bullets: [
     {
-      title: "Mobile Responsive Template",
-      desc: "Nextly is designed as a mobile first responsive template.",
+      title: "Reliable and Easy to Use",
+      desc: "90% accuracy rate guaranteed.",
       icon: <DevicePhoneMobileIcon />,
     },
     {
-      title: "Powered by Next.js & TailwindCSS",
-      desc: "This template is powered by latest technologies and tools.",
+      title: "The Best Way to Detect AI",
+      desc: "Covers major large language models like ChatGPT, Claude, Bard/Gemini, and more.",
       icon: <AdjustmentsHorizontalIcon />,
     },
     {
-      title: "Dark & Light Mode",
-      desc: "Nextly comes with a zero-config light & dark mode. ",
+      title: "Designed for Students",
+      desc: "Perfect for projects like assignments, research papers, and working drafts.",
       icon: <SunIcon />,
     },
   ],
 };
 
 const benefitThree = {
-  title: "AI Mind Map Maker",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "AI Essay Writer - Your #1 Paper Writing Assistant ",
+  desc: "100% human like , get your A+ essays Faster",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
+      title: "AI Writer that Understands",
+      desc: "Trained on high-quality essays, our AI understands essay structure and grading criteria.",
       icon: <FaceSmileIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
+      title: "Personal Data Safety",
+      desc: "Your data is protected and risk-free.",
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
+      title: "Multilingual Capabilities",
+      desc: "Rephrase text in over 20 languages.",
       icon: <CursorArrowRaysIcon />,
     },
   ],
 };
 
 const benefitFour = {
-  title: "Bypass",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "AI Mind Map Maker",
+  desc: "Communicate Ideas Faster and Clearer",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
+      title: "Organize Your Thoughts",
+      desc: "Create instant, customizable, and shareable visual content in seconds.",
       icon: <FaceSmileIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
+      title: "Create from Documented Information",
+      desc: "Generate mind maps from PDFs, Word documents, and text.",
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
+      title: "I-Driven Expansion for Endless Ideas",
+      desc: "Perfect for studying and brainstorming sessions.",
       icon: <CursorArrowRaysIcon />,
     },
   ],

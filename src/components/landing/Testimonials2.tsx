@@ -18,28 +18,35 @@ export const Testimonials2 = () => {
       />
       
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-4">
-        <CardButton image={userOneImg}
-          name="AI Essay Writer"
-          title="Go AI Essay Writer"
-          href="/essay-writer"
-        />
+        <CardButton image={userThreeImg}
+              name="AI Bypass"
+              title="Go AI Bypass"
+              href="/bypass"
+              alt="Rewrite any content"
+              />
 
         <CardButton image={userTwoImg}
-          name="AI Detector"
-          title="Go AI Detector"
-          href="/detector"
-        />
+              name="AI Detector"
+              title="Go AI Detector"
+              href="/detector"
+              alt="AI Checker for ChatGPT, Claude & More"
+              />
+
+        <CardButton image={userOneImg}
+            name="AI Essay Writer"
+            title="Go AI Essay Writer"
+            href="/essay-writer"
+            alt="100% Human-like"
+            />
 
         <CardButton image={userThreeImg}
-          name="AI Mind Map Maker"
-          title="Go AI Mind Map Maker"
-          href="/mind-map-maker"
-        />
+            name="AI Mind Map Maker"
+            title="Go AI Mind Map Maker"
+            href="/mind-map-maker"
+            alt="From PDFs, Word, and Text"
+            />
         
-        <CardButton image={userThreeImg}
-              name="Bypass"
-              title="Go Bypass"
-              href="/bypass"/>
+        
         
       </div>
     </Container>
@@ -53,6 +60,7 @@ interface CardButtonProps {
   image: any;
   name: string;
   title: string;
+  alt: string;
 }
 
 function CardButton(props: Readonly<CardButtonProps>) {
@@ -64,6 +72,7 @@ function CardButton(props: Readonly<CardButtonProps>) {
             image={props.image}
             name={props.name}
             title={props.title}
+            alt={props.alt}
           />
         </div>
       </div>
@@ -77,6 +86,7 @@ interface AvatarProps {
   image: any;
   name: string;
   title: string;
+  alt: string;
 }
 
 function Avatar(props: Readonly<AvatarProps>) {
@@ -87,7 +97,7 @@ function Avatar(props: Readonly<AvatarProps>) {
           src={props.image}
           width="60"
           height="60"
-          alt="Avatar"
+          alt={props.alt}
           placeholder="blur"
         />
       </div>
