@@ -8,7 +8,7 @@ import { Testimonials } from "@/components/landing/Testimonials";
 import { Faq } from "@/components/landing/Faq";
 import { Cta } from "@/components/landing/Cta";
 
-import { benefitFour, benefitOne, benefitThree, benefitTwo } from "@/components/landing/data";
+import { benefitBypass, benefitDetector, benefitEssay, benefitMindMaker} from "@/components/landing/data";
 
 import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
@@ -37,16 +37,13 @@ export default function Home() {
           />
 
         <Testimonials2 />
-        <SectionTitle
-          title="Why should you use AIWriter.PRO"
-        >
-        </SectionTitle>
-        
-        <Benefits data={benefitOne} />
-        <Benefits imgPos="right" data={benefitTwo} />
-        <Benefits data={benefitThree} />
-        <Benefits imgPos="right" data={benefitFour} />
 
+        <SectionTitle title="Why should you use AIWriter.PRO" />
+        
+        <Benefits data={benefitBypass} />
+        <Benefits imgPos="right" data={benefitDetector} />
+        <Benefits data={benefitEssay} />
+        <Benefits imgPos="right" data={benefitMindMaker} />
 
         <DigitalMarketing />
         <Testimonials />
@@ -55,7 +52,7 @@ export default function Home() {
       </Container>
       <Footer />
       {/* <PopupWidget /> */}
-      <UpgradeToProButton />
+      {/* <UpgradeToProButton /> */}
     </ThemeProvider>
     
   );

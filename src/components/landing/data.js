@@ -10,7 +10,7 @@ import {
 import benefitOneImg from "../../../public/img/benefit-one.png";
 import benefitTwoImg from "../../../public/img/benefit-two.png";
 
-const benefitOne = {
+const benefitBypass = {
   title: "AI Bypass - Bypass AI Every Time With 100% Undetectable Content",
   desc: "Generate Human-Like Content. Guaranteed Plagiarism-Free!",
   image: benefitOneImg,
@@ -33,7 +33,7 @@ const benefitOne = {
   ],
 };
 
-const benefitTwo = {
+const benefitDetector = {
   title: "AI Detector - Reliable and Easy to Use",
   desc: "AI Checker for ChatGPT, Claude & More",
   image: benefitTwoImg,
@@ -56,7 +56,7 @@ const benefitTwo = {
   ],
 };
 
-const benefitThree = {
+const benefitEssay = {
   title: "AI Essay Writer - Your #1 Paper Writing Assistant ",
   desc: "100% human like , get your A+ essays Faster",
   image: benefitOneImg,
@@ -79,7 +79,7 @@ const benefitThree = {
   ],
 };
 
-const benefitFour = {
+const benefitMindMaker = {
   title: "AI Mind Map Maker",
   desc: "Communicate Ideas Faster and Clearer",
   image: benefitOneImg,
@@ -103,4 +103,4 @@ const benefitFour = {
 };
 
 
-export {benefitOne, benefitTwo, benefitThree, benefitFour};
+export {benefitBypass, benefitDetector, benefitEssay, benefitMindMaker};

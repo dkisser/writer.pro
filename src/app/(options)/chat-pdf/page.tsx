@@ -8,7 +8,7 @@ import { Testimonials } from "@/components/landing/Testimonials";
 import { Faq } from "@/components/landing/Faq";
 import { Cta } from "@/components/landing/Cta";
 
-import { benefitOne, benefitTwo } from "@/components/landing/data";
+import { benefitBypass, benefitDetector } from "@/components/landing/data";
 
 import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
@@ -35,8 +35,8 @@ const ChatPdf = () => {
           completely open-source.
         </SectionTitle>
 
-        <Benefits data={benefitOne} />
-        <Benefits imgPos="right" data={benefitTwo} />
+        <Benefits data={benefitBypass} />
+        <Benefits imgPos="right" data={benefitDetector} />
 
         <SectionTitle
           preTitle="Watch a video"

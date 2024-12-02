@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Container }  from "@/components/landing/Container";
+import styles from '@/components/upgrade-to-pro-button/styles.module.css'
 
 interface BenefitsProps {
   imgPos?: "left" | "right";
@@ -24,26 +25,39 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
           className={`flex items-center justify-center w-full lg:w-1/2 ${
             props.imgPos === "right" ? "lg:order-1" : ""
           }`}>
-          <div>
-            <Image
-              src={data.image}
-              width={521}
-              height={521}
-              alt="Benefits"
-              className={"object-cover"}
-              placeholder="blur"
-              blurDataURL={data.image.src}
-            />
+          <div className="lex flex-col h-full w-full">
+            <div className="flex h-5/6 w-full">
+              <Image
+                src={data.image}
+                style={{ width: "100%", height: "100%" }}
+                alt="Benefits"
+                className={"object-cover"}
+                placeholder="blur"
+                blurDataURL={data.image.src}
+              />
+            </div>
+            <div className="flex h-1/6 items-center justify-center">
+              <a
+                className={styles.button}
+                role='button'
+                href='/login'
+                target='_blank'
+              >
+                
+                Upgrade to Pro
+                <span className={styles.buttonInner} />
+              </a>
+            </div>
           </div>
         </div>
 
         <div
-          className={`flex flex-wrap items-center w-full lg:w-1/2 ${
+          className={`flex flex-wrap w-full lg:w-1/2 ${
             data.imgPos === "right" ? "lg:justify-end" : ""
           }`}>
           <div>
-            <div className="flex flex-col w-full mt-4">
-              <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
+            <div className="flex flex-col w-full">
+              <h3 className="max-w-2xl text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
                 {data.title}
               </h3>
 
@@ -59,21 +73,6 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
                 </Benefit>
               ))}
             </div>
-          </div>
-        </div>
-
-        <div
-          className="" >
-          <div>
-          <a
-            className=""
-            role='button'
-            href='/login'
-            target='_blank'
-          >
-            Upgrade to Pro
-            <span className="" />
-          </a>
           </div>
         </div>
       </Container>

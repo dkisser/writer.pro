@@ -12,8 +12,8 @@ const writerPro = {
     tenantCode: 'us',
     firebaseConfig: firebaseConfig,
     loginSuccessPage: '/essay-writer',
-    productionDomain: 'https://aiwriter.pro/wb',
-    developmentDomain: 'http://localhost:8080/wb',
+    productionDomain: 'https://aiwriter.pro',
+    developmentDomain: 'http://localhost:8080',
     
 };
 

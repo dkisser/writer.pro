@@ -62,17 +62,17 @@ const VerticalMenu = ({ scrollMenu }: { scrollMenu: (container: any, isPerfectSc
         renderExpandedMenuItemIcon={{ icon: <i className='ri-circle-line' /> }}
         menuSectionStyles={menuSectionStyles(theme)}
       >
-        <MenuItem href={writerPro.loginSuccessPage} icon={<i className='ri-voice-ai-line' />}>
-          AI Essay Writer
-        </MenuItem>
         <MenuItem href='/detector' icon={<i className='ri-chat-1-line' />}>
           AI Detector
         </MenuItem>
+        <MenuItem href='/bypass' icon={<i className='ri-user-settings-line' />}>
+          AI Bypass
+        </MenuItem>
+        <MenuItem href='/essay-writer' icon={<i className='ri-voice-ai-line' />}>
+          AI Essay Writer
+        </MenuItem>
         <MenuItem href='/mind-map-maker' icon={<i className='ri-mind-map' />}>
           AI Mind Map Maker
-        </MenuItem>
-        <MenuItem href='/bypass' icon={<i className='ri-user-settings-line' />}>
-          Bypass
         </MenuItem>
         {/* 示例代码 */}
         {/* <SubMenu

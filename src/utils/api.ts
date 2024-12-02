@@ -6,6 +6,8 @@ const ENV =
         ? writerPro.productionDomain
         : writerPro.developmentDomain;
 
+const HK_POXY = "43.198.200.130:8080";
+
 
 /**
  * 登录
@@ -19,4 +21,11 @@ export const apiLogin = async <T>(params: any): Promise<IRequestResult<T>> => {
  */
 export const apiRegister = async <T>(params: any): Promise<IRequestResult<T>> => {
     return sendPost<T>(`${ENV}/user/v1/register`, params);
+};
+
+/**
+ * completion
+ */
+export const llmGenerate = async <T>(params: any): Promise<IRequestResult<T>> => {
+    return sendPost<T>(`${HK_POXY}/llm/v1/generate`, params);
 };

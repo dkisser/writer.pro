@@ -12,7 +12,7 @@ export interface IRequestResult<T> {
 // 基地址
 const service = axios.create({
     baseURL: '',
-    timeout: 10000,
+    timeout: 30000,
 });
 
 // 请求拦截

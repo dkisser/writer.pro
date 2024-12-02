@@ -38,17 +38,14 @@ export const Hero = (props: Readonly<HeroProps>) => {
           </div>
         </div>
         <div className="flex items-center justify-center w-full lg:w-1/2">
-          <div className="">
             <Image
               src={heroImg}
-              width="616"
-              height="617"
+              style={{ width: "100%", height: "100%" }}
               className={"object-cover"}
               alt={props.alt}
               loading="eager"
               placeholder="blur"
             />
-          </div>
         </div>
       </Container>
     </>

@@ -116,11 +116,11 @@ export function Footer() {
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
           Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
-          <a href="https://web3templates.com/" target="_blank" rel="noopener">
+          <a href="https://web3templates.com/" target="_blank" rel="noopener" className="dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">
             AIWriter.PRO.
           </a>{" "}
           Illustrations from{" "}
-          <a href="https://www.glazestock.com/" target="_blank" rel="noopener ">
+          <a href="https://www.glazestock.com/" target="_blank" rel="noopener" className="dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700">
             Glazestock
           </a>
         </div>

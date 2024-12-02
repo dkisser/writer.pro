@@ -46,8 +46,6 @@ export const Testimonials2 = () => {
             alt="From PDFs, Word, and Text"
             />
         
-        
-        
       </div>
     </Container>
   );
