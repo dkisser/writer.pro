@@ -8,7 +8,7 @@ import { Testimonials } from "@/components/landing/Testimonials";
 import { Faq } from "@/components/landing/Faq";
 import { Cta } from "@/components/landing/Cta";
 
-import { benefitBypass, benefitDetector, benefitEssay, benefitMindMaker } from "@/components/landing/data";
+import { benefitBypass, benefitDetector, benefitEssay, benefitMindMaker, faq } from "@/components/landing/data";
 
 import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
@@ -44,7 +44,7 @@ const Detector = () => {
 
         <DigitalMarketing />
         <Testimonials />
-        <Faq />
+        <Faq qa={faq}/>
       </Container>
       <Footer />
       {/* <PopupWidget /> */}

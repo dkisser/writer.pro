@@ -8,7 +8,7 @@ import { Testimonials } from "@/components/landing/Testimonials";
 import { Faq } from "@/components/landing/Faq";
 import { Cta } from "@/components/landing/Cta";
 
-import { benefitBypass, benefitDetector } from "@/components/landing/data";
+import { benefitBypass, benefitDetector, faq } from "@/components/landing/data";
 
 import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
@@ -64,7 +64,7 @@ const Chat = () => {
           conversion rate as well as support or chat requests.
         </SectionTitle>
 
-        <Faq />
+        <Faq qa={faq}/>
         {/* <Cta /> */}
       </Container>
       <Footer />
