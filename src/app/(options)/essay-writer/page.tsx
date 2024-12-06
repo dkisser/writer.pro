@@ -8,13 +8,13 @@ import { Testimonials } from "@/components/landing/Testimonials";
 import { Faq } from "@/components/landing/Faq";
 import { Cta } from "@/components/landing/Cta";
 
-import { benefitBypass, benefitDetector, benefitEssay, benefitMindMaker } from "@/components/landing/data";
+import { essayFaq, opsBenefitEssay } from "@/components/landing/data";
 
 import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
 import { PopupWidget }  from "@/components/PopupWidget";
 import { ThemeProvider } from "next-themes";
-import UpgradeToProButton from "@/components/upgrade-to-pro-button";
+import TryForFreeButton from "@/components/upgrade-to-pro-button";
 import PricingTable from "@/components/PricingTable";
 import { Testimonials2 } from "@/components/landing/Testimonials2";
 import { DigitalMarketing } from "@/components/landing/DigitalMarketing";
@@ -30,26 +30,36 @@ const EssayWriter = () => {
     <ThemeProvider attribute="class">
       <Container>
 
-        <AITextField />
-
         <Hero 
-          heroTitle="Free AI Writer - Text Generator & AI Writing Assistant" 
-          heroDescription= "Generate high-quality content  for social media, marketing, advertising, product descriptions, websites and more. 100% free . Results in no seconds."
+          heroTitle="AI Essay Writer:  Write better essays in less time" 
+          heroDescription= "Our AI acts as your personal writing assistant, providing well-structured and researched content."
           alt="brand slogan, AI Essay Writer"
+          options={[
+            "Trusted by millions of students and professionals",
+            "Support 200+languages",
+            "Covers a wide range of academic disciplines.",
+          ]}
         />
 
-        <Testimonials2 />
+        <SectionTitle title="AI Essay Writer" />
+        <AITextField />
 
-        <SectionTitle title="Why should you use AIWriter.PRO" />
+        <SectionTitle title="Why should you use AI Essay Writer" />
+        <Benefits data={opsBenefitEssay} />
+
+        <SectionTitle title="How to use AI Essay Writer" preTitle="Learn how to use AI Essay Writer"/>
+        <Video videoId="fZ0D0cnR88E" />
+
         
-        <Benefits data={benefitBypass} />
-        <Benefits imgPos="right" data={benefitDetector} />
-        <Benefits data={benefitEssay} />
-        <Benefits imgPos="right" data={benefitMindMaker} />
-
-        <DigitalMarketing />
         <Testimonials />
-        <Faq />
+
+        <SectionTitle title="General Questions">
+          Answer your customers possible questions here, it will increase the
+          conversion rate as well as support or chat requests.
+        </SectionTitle>
+        <Faq 
+          qa={essayFaq}
+        />
       </Container>
       <Footer />
     </ThemeProvider>

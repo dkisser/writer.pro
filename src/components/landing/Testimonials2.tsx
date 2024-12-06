@@ -2,44 +2,45 @@ import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/landing/Container";
 
-import userOneImg from "../../../public/img/user1.jpg";
-import userTwoImg from "../../../public/img/user2.jpg";
-import userThreeImg from "../../../public/img/user3.jpg";
+import scanImg from "../../../public/img/options/scan.svg";
+import mapImg from "../../../public/img/options/map.svg";
+import fileTextImg from "../../../public/img/options/filetext.svg";
+import checkImg from "../../../public/img/options/check.svg";
+
 import { SectionTitle } from "./SectionTitle";
 import ThemeChanger from "./DarkSwitch";
 import Link from "../Link";
 import { Box } from "@mui/material";
 
+
+
 export const Testimonials2 = () => {
   return (
     <Container>
-      <SectionTitle
-        title="What are you working on today?"
-      />
       
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-4">
-        <CardButton image={userThreeImg}
+        <CardButton image={checkImg}
               name="AI Bypass"
               title="Go AI Bypass"
               href="/bypass"
               alt="Rewrite any content"
               />
 
-        <CardButton image={userTwoImg}
+        <CardButton image={scanImg}
               name="AI Detector"
               title="Go AI Detector"
               href="/detector"
               alt="AI Checker for ChatGPT, Claude & More"
               />
 
-        <CardButton image={userOneImg}
+        <CardButton image={fileTextImg}
             name="AI Essay Writer"
             title="Go AI Essay Writer"
             href="/essay-writer"
             alt="100% Human-like"
             />
 
-        <CardButton image={userThreeImg}
+        <CardButton image={mapImg}
             name="AI Mind Map Maker"
             title="Go AI Mind Map Maker"
             href="/mind-map-maker"
@@ -90,13 +91,13 @@ interface AvatarProps {
 function Avatar(props: Readonly<AvatarProps>) {
   return (
     <div className="flex items-center space-x-3">
-      <div className="flex-shrink-0 overflow-hidden w-14 h-14">
+      <div className="flex-shrink-0 overflow-hidden  w-14 h-14">
         <Image
           src={props.image}
-          width="60"
-          height="60"
+          width="56"
+          height="56"
           alt={props.alt}
-          placeholder="blur"
+          // placeholder="blur"
         />
       </div>
       <div className="mx-2">

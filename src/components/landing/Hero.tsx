@@ -4,8 +4,10 @@ import heroImg from "../../../public/img/hero.png";
 
 interface HeroProps {
   heroTitle?: string;
+  greenTitle?: string;
   heroDescription?: string;
   alt: string;
+  options?: string[];
 }
 
 export const Hero = (props: Readonly<HeroProps>) => {
@@ -17,23 +19,21 @@ export const Hero = (props: Readonly<HeroProps>) => {
             <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
               {props?.heroTitle? props.heroTitle : "Free Landing Page Template for startups"}
             </h1>
+            <h1 className="text-4xl font-thin leading-snug tracking-tight text-green-500 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
+              {props?.greenTitle? props.greenTitle : ""}
+            </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
               {props?.heroDescription? props.heroDescription : "Nextly is a free landing page & marketing website template for startups and indie projects. Its built with Next.js & TailwindCSS. And its completely open-source."}
             </p>
             
             {/* 子功能点 */}
-            <p className="py-5 text-xl leading-normal text-gray-600 lg:text-xl xl:text-2xl dark:text-gray-300">
-              * AI Bypass : Our advanced anti-AI algorithms ensure a genuine human touch while remaining undetectable
-            </p>
-            <p className="py-5 text-xl leading-normal text-gray-600 lg:text-xl xl:text-2xl dark:text-gray-300">
-              * AI Detector: Reliable and easy to use. No harm in double-checking your work.
-            </p>
-            <p className="py-5 text-xl leading-normal text-gray-600 lg:text-xl xl:text-2xl dark:text-gray-300">
-              * AI Essay Writer: Focus on your ideas, not the writing grind. Fuel your academic success with essays that sound human-written.
-            </p>
-            <p className="py-5 text-xl leading-normal text-gray-600 lg:text-xl xl:text-2xl dark:text-gray-300">
-              * AI Mind Map Maker: Need a hand visualizing your ideas? Generate and organize them in seconds
-            </p>
+            {
+              props?.options?.map((item) => (
+                <p className="py-5 text-xl leading-normal text-gray-600 lg:text-xl xl:text-2xl dark:text-gray-300">
+                  * {item}
+                </p>
+              ))
+            }
             
           </div>
         </div>

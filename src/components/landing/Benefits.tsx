@@ -30,7 +30,7 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
               <Image
                 src={data.image}
                 style={{ width: "100%", height: "100%" }}
-                alt="Benefits"
+                alt={'Introduction: '+ data.desc}
                 className={"object-cover"}
                 placeholder="blur"
                 blurDataURL={data.image.src}
@@ -44,7 +44,7 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
                 target='_blank'
               >
                 
-                Upgrade to Pro
+                Try for FREE now
                 <span className={styles.buttonInner} />
               </a>
             </div>

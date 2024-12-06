@@ -14,7 +14,7 @@ import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
 import { PopupWidget }  from "@/components/PopupWidget";
 import { ThemeProvider } from "next-themes";
-import UpgradeToProButton from "@/components/upgrade-to-pro-button";
+import TryForFreeButton from "@/components/upgrade-to-pro-button";
 import { Testimonials2 } from "@/components/landing/Testimonials2";
 import { DigitalMarketing } from "@/components/landing/DigitalMarketing";
 
@@ -48,7 +48,7 @@ const Detector = () => {
       </Container>
       <Footer />
       {/* <PopupWidget /> */}
-      <UpgradeToProButton />
+      <TryForFreeButton />
     </ThemeProvider>
     
   )

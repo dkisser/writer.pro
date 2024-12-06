@@ -4,10 +4,12 @@ import { Backdrop, CircularProgress, Divider, FormHelperText, IconButton, InputB
 
 import { useState } from 'react';
 import { AcademicCapIcon } from "@heroicons/react/24/solid";
-import { useForm } from 'react-hook-form';
+import { set, useForm } from 'react-hook-form';
 import writerPro from '@/configs/writerpro';
 import { llmGenerate } from '@/utils/api';
 import Alert from '../Alert';
+import MarkdownIt from 'markdown-it';
+import DOMPurify from 'dompurify';
 
 interface LLMResponse {
     choices?: Array<LLMMessage>;
@@ -30,7 +32,8 @@ const typeOfChoice = (data: any): data is LLMResponse['choices'] => {
   };
 
 const AITextField = () => {
-    const [generation, setGeneration] = useState("");
+    // const [generation, setGeneration] = useState<{ __html: string }>({ __html: "" });
+    const [generation, setGeneration] = useState<string>("");
     const [loading, setLoading] = useState<boolean>(false);
 
     const {register, handleSubmit, formState: { errors}} = useForm();
@@ -56,8 +59,13 @@ const AITextField = () => {
             }
             const generateData = resData as LLMResponse;
             if (generateData.choices && generateData.choices.length > 0) {
+                // const mdStr = generateData.choices[0].message.content
+                // const mdParser = new MarkdownIt();
+                // const cleanHtml = DOMPurify.sanitize(mdParser.render(mdStr));
+                // setGeneration({ __html: cleanHtml });
                 setGeneration(generateData.choices[0].message.content);
             } else {
+                // setGeneration({ __html: "No content generated" });
                 setGeneration("No content generated");
             }
 
@@ -77,7 +85,7 @@ const AITextField = () => {
         <div className="flex justify-center w-full h-full">
             <Paper
                 component="form"
-                sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '100%'}}
+                sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '100%', height: '100%'}}
                 noValidate autoComplete='off' onSubmit={handleSubmit(onSubmit)} 
             >
                 
@@ -128,7 +136,10 @@ const AITextField = () => {
 
                 
                 <Divider sx={{ height: '100%', m: 0.5 }} orientation="vertical" />
-                <div className="flex-col items-center justify-center w-1/2 h-full">
+                
+                <div className="flex flex-col items-center justify-center w-1/2 h-full"
+                    style={{ height: '100%', overflowY: 'auto' }}
+                    >
                     {/* TODO 这个地方的样式不太可控，后面得想办法调整样式 */}
                     <InputBase 
                         fullWidth 
@@ -140,6 +151,10 @@ const AITextField = () => {
                         placeholder="After your subbmition, GPT will generate a report for you"
                         
                     />
+                    {/* <div className="flex flex-col items-center justify-center w-full h-full mt-5"
+                        dangerouslySetInnerHTML={generation}
+                        style={{ maxHeight: 'calc(100vh - 64px)', overflowY: 'auto' }}
+                        /> */}
                 </div>
             </Paper>
             {Alert.renderAlert()}

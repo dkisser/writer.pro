@@ -9,13 +9,11 @@ import { SectionTitle } from "./SectionTitle";
 import ThemeChanger from "./DarkSwitch";
 import Link from "../Link";
 import { Box } from "@mui/material";
+import TryForFreeButton from "../upgrade-to-pro-button";
 
 export const Testimonials = () => {
   return (
     <Container>
-      <SectionTitle
-        title="Millions are becoming better writers"
-      />
       
       <div className="grid gap-10 lg:grid-cols-4 xl:grid-cols">
         {/* <div className="lg:col-span-2 xl:col-auto">

@@ -50,7 +50,7 @@ const TooltipContent = () => {
   )
 }
 
-const UpgradeToProButton = () => {
+const TryForFreeButton = () => {
   return (
     <div className={classnames(styles.wrapper, 'mui-fixed')}>
       {/* <Tooltip
@@ -74,11 +74,11 @@ const UpgradeToProButton = () => {
           href='/login'
           target='_blank'
         >
-          Upgrade to Pro
+          Try for FREE now
           <span className={styles.buttonInner} />
         </a>
     </div>
   )
 }
 
-export default UpgradeToProButton
+export default TryForFreeButton

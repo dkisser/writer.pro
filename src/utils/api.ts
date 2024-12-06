@@ -6,7 +6,7 @@ const ENV =
         ? writerPro.productionDomain
         : writerPro.developmentDomain;
 
-const HK_POXY = "43.198.200.130:8080";
+const HK_POXY = writerPro.hkProxyDomain;
 
 
 /**
