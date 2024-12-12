@@ -48,7 +48,7 @@ const Bypass = () => {
       </Container>
       <Footer />
       {/* <PopupWidget /> */}
-      <TryForFreeButton />
+
     </ThemeProvider>
     
   )

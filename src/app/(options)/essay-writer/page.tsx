@@ -18,7 +18,7 @@ import TryForFreeButton from "@/components/upgrade-to-pro-button";
 import PricingTable from "@/components/PricingTable";
 import { Testimonials2 } from "@/components/landing/Testimonials2";
 import { DigitalMarketing } from "@/components/landing/DigitalMarketing";
-import AITextField from "@/components/input/AITextField";
+import AIEssayTextField from "@/components/input/AIEssayTextField";
 
 export const metadata: Metadata = {
   title: "AI Essay Writer| Undetectable Gen AI tool|100% Human-like",
@@ -29,6 +29,8 @@ const EssayWriter = () => {
   return (
     <ThemeProvider attribute="class">
       <Container>
+
+        <AIEssayTextField />
 
         <Hero 
           heroTitle="AI Essay Writer:  Write better essays in less time" 
@@ -41,16 +43,13 @@ const EssayWriter = () => {
           ]}
         />
 
-        <SectionTitle title="AI Essay Writer" />
-        <AITextField />
-
         <SectionTitle title="Why should you use AI Essay Writer" />
         <Benefits data={opsBenefitEssay} />
 
         <SectionTitle title="How to use AI Essay Writer" preTitle="Learn how to use AI Essay Writer"/>
         <Video videoId="fZ0D0cnR88E" />
 
-        
+        <PricingTable />
         <Testimonials />
 
         <SectionTitle title="General Questions">

@@ -31,7 +31,7 @@ const typeOfChoice = (data: any): data is LLMResponse['choices'] => {
     );
   };
 
-const AITextField = () => {
+const AIEssayTextField = () => {
     // const [generation, setGeneration] = useState<{ __html: string }>({ __html: "" });
     const [generation, setGeneration] = useState<string>("");
     const [loading, setLoading] = useState<boolean>(false);
@@ -95,7 +95,7 @@ const AITextField = () => {
                     <InputBase 
                         fullWidth 
                         multiline 
-                        rows={20}
+                        rows={22}
                         sx={{p: '20px'}}
                         placeholder="Please input your text here, then click the button below to generate a summary."
                         error={!!errors.userPrompt}
@@ -129,7 +129,7 @@ const AITextField = () => {
                     
                     <Tooltip title="Subbmit" placement='top'>
                         <IconButton type="submit" sx={{ p: '10px' }} aria-label="search" disabled={!!errors.userPrompt}>
-                            <AcademicCapIcon className='w-5 h-5 text-indigo-500'></AcademicCapIcon>
+                            <AcademicCapIcon className='w-8 h-8 text-indigo-500'></AcademicCapIcon>
                         </IconButton>
                     </Tooltip>
                 </div>
@@ -145,7 +145,7 @@ const AITextField = () => {
                         fullWidth 
                         multiline 
                         disabled
-                        rows={20}
+                        rows={22}
                         value={generation}
                         sx={{p: '20px'}}
                         placeholder="After your subbmition, GPT will generate a report for you"
@@ -162,4 +162,4 @@ const AITextField = () => {
     );
 };
 
-export default AITextField;
+export default AIEssayTextField;

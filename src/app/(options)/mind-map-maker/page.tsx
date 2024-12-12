@@ -8,7 +8,7 @@ import { Testimonials } from "@/components/landing/Testimonials";
 import { Faq } from "@/components/landing/Faq";
 import { Cta } from "@/components/landing/Cta";
 
-import { benefitBypass, benefitDetector, benefitEssay, benefitMindMaker, faq } from "@/components/landing/data";
+import { benefitBypass, benefitDetector, benefitEssay, benefitMindMaker, faq, mindMakerFaq, opsBenefitMindMaker, opsMindMakerYouCan } from "@/components/landing/data";
 
 import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
@@ -17,6 +17,7 @@ import { ThemeProvider } from "next-themes";
 import TryForFreeButton from "@/components/upgrade-to-pro-button";
 import { Testimonials2 } from "@/components/landing/Testimonials2";
 import { DigitalMarketing } from "@/components/landing/DigitalMarketing";
+import PricingTable from "@/components/PricingTable";
 
 export const metadata: Metadata = {
   title: "AI Mind Map Maker - Instand generating & visualizing ideas",
@@ -28,27 +29,37 @@ const MindMapMaker = () => {
     <ThemeProvider attribute="class">
       <Container>
         <Hero 
-          heroTitle="AI Mind Map Maker"
-          heroDescription="AI Mind Map Maker powerd by XXX - XXXXX"
+          heroTitle="AI Mind Map Magic: Visualize Your Thoughts, Ace Your Work"
+          heroDescription="Unleash the Power of AI to Brainstorm, Plan, and Study Smarter"
           alt="brand slogan, AI Mind Map Maker"
+          options={[
+            "Endless Inspiration: AI-powered expansion for any topic, big or small.",
+            "Team Up and Conquer: Collaborate with classmates and study buddies.",
+            "Visualize Your Success: Transform complex ideas into clear, colorful mind maps.",
+            "Instant Results: Quick and structured mind maps in seconds, not hours."
+          ]}
         />
+
+        <Benefits imgPos="right" data={opsBenefitMindMaker} />
+
+        <Benefits imgPos="left" data={opsBenefitMindMaker} />
+
+        <Benefits imgPos="right" data={opsBenefitMindMaker} />
+
+        <Benefits imgPos="left" data={opsMindMakerYouCan} />
+
+        <PricingTable />
+
+        <SectionTitle title="General Questions">
+          Answer your customers possible questions here, it will increase the
+          conversion rate as well as support or chat requests.
+        </SectionTitle>
         
-        <Testimonials2 />
-
-        <SectionTitle title="Why should you use AIWriter.PRO" />
-
-        <Benefits data={benefitBypass} />
-        <Benefits imgPos="right" data={benefitDetector} />
-        <Benefits data={benefitEssay} />
-        <Benefits imgPos="right" data={benefitMindMaker} />
-
-        <DigitalMarketing />
-        <Testimonials />
-        <Faq qa={faq}/>
+        <Faq qa={mindMakerFaq}/>
       </Container>
       <Footer />
       {/* <PopupWidget /> */}
-      <TryForFreeButton />
+
     </ThemeProvider>
     
   )
